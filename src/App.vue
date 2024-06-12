@@ -1,11 +1,13 @@
-<script>
-export default {
+<script setup>
+import { ref } from 'vue'
+
+const weather = ref({
   data() {
     return {
       city: ""
     }
   }
-}
+})
 </script>
 
 <template>
