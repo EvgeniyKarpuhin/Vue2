@@ -1,6 +1,4 @@
-import { createApp } from 'vue'
-
-const app = createApp({
+new Vue({
     el: '#app',
     data: {
         name: 'Jone',
