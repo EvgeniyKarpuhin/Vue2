@@ -14,7 +14,7 @@ const weather = ref({
   <div class="wrapper">
     <h1>Погодное приложение</h1>
     <P>Узнать погоду в {{ city }}</P>
-    <input type="text" @input="this.city = $event.target.value" placeholder="Введите город">
+    <input type="text" v-model="city" placeholder="Введите город">
     <button>Получить погоду</button>
   </div>
 </template>
