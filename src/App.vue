@@ -9,11 +9,4 @@
   </div>
 </template>
 
-<style scoped>
-.wrapper {
-  width: 900px;
-  height: 500px;
-  border-radius: 50px;
-  background: #11b416;
-}
-</style>
+
