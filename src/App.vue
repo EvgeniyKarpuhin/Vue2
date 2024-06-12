@@ -3,12 +3,17 @@
 </script>
 
 <template>
-  <h1>Hello</h1>
+  <div class="wrapper">
+    <h1>Погодное приложение</h1>
+    <P>Узнать погоду в вашем городе</P>
+  </div>
 </template>
 
 <style scoped>
-h1 {
-  color: green;
-  
+.wrapper {
+  width: 900px;
+  height: 500px;
+  border-radius: 50px;
+  background: #11b416;
 }
 </style>
