@@ -1,11 +1,13 @@
 <script setup>
+
 import { computed, ref } from 'vue'
 
 const weather = ref({
   data() {
     return {
       city: "",
-      error: ""
+      error: "",
+      info: null
     }
   },
   computed: {
@@ -19,6 +21,8 @@ const weather = ref({
         this.error = "Нужно название более 2 символов"
         return false
       }
+      axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&appid=a059085e330fce68f911321b65962676`)
+      .then(res => (this.info = res.data))
     }
   }
 })
@@ -32,6 +36,7 @@ const weather = ref({
     <button v-if="weather.city != ''" @click="getWeather()">Получить погоду</button>
     <button disabled v-else>Введите название города</button>
     <p class="error">{{ error }}</p>
+
   </div>
 </template>
 
