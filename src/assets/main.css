@@ -46,6 +46,11 @@ body {
     border-bottom-color: #6e2d6e;
   }
 
+  .wrapper button:disabled {
+    background: #eb7303;
+    cursor: not-allowed;
+  }
+
   .wrapper button {
     background: #e3bc4b;
     color: #fff;
