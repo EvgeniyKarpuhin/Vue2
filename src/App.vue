@@ -4,7 +4,8 @@ import { computed, ref } from 'vue'
 const weather = ref({
   data() {
     return {
-      city: ""
+      city: "",
+      error: ""
     }
   },
   computed: {
@@ -14,7 +15,10 @@ const weather = ref({
   },
   methods: {
     getWeather() {
-      alert("Some")
+      if(this.city.trim().lengt <2) {
+        this.error = "Нужно название более 2 символов"
+        return false
+      }
     }
   }
 })
@@ -27,6 +31,7 @@ const weather = ref({
     <input type="text" v-model="weather.city" placeholder="Введите город">
     <button v-if="weather.city != ''" @click="getWeather()">Получить погоду</button>
     <button disabled v-else>Введите название города</button>
+    <p class="error">{{ error }}</p>
   </div>
 </template>
 
