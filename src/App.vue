@@ -15,7 +15,8 @@ const weather = ref({
     <h1>Погодное приложение</h1>
     <P>Узнать погоду в {{ city == "" ? "вашем городе" : city }}</P>
     <input type="text" v-model="city" placeholder="Введите город">
-    <button>Получить погоду</button>
+    <button v-if="city != ''">Получить погоду</button>
+    <button disabled v-else>Введите название города</button>
   </div>
 </template>
 
